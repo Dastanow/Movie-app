@@ -1,0 +1,26 @@
+.movie_{
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.movie_:hover{
+    
+    padding: 10px 20px;
+    border: 2px solid #000; /* Цвет рамки кнопки по умолчанию */
+    border-radius: 5px;
+    background: none; /* Фон кнопки без цвета */
+    // transition: border-color 0.s;
+ }
+    
+.movie{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    width: 200px;
+    color: #fff;
+    height: 0 auto;
+    padding: 8px;
+    margin: 40px 20px;
+    border-color: #f00; /* Изменение цвета рамки при наведении */
+    transform: scale(1.1);
+    .img_muvie img {
+        width: 100%;
+    }
+}

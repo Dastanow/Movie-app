@@ -1,32 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './home.scss'
 import Heder from '../../components/Heder'
 import Footer from '../../components/Footer'
-import MovieCart from '../../components/MovieCart'
+import { useDispatch } from 'react-redux'
+import { fetchAsyncAnime, fetchAsyncMovies, fetchAsyncShows } from '../../srore/slices/movieSlaise'
+import MovieLising from '../../components/MovieLising'
+
 
 
 const Home = () => {
+      const dispatch = useDispatch();
+
+      useEffect(() => {
+        dispatch(fetchAsyncMovies("star wars"));
+        dispatch(fetchAsyncShows("shows"));
+        // dispatch(fetchAsyncAnime("anime"))
+      }, [dispatch]);
   return (
     <div>
         <Heder/>
-        <div className='cart_item'>
-           <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        </div>
-          <h1 style={{color: '#fff'}}>show</h1>
-        <div className='item_cart'>
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
-        <MovieCart />
+        <h1 style={{color: '#fff'}}>Movie</h1>
+        {/* <div className='item_cart'> */}
+    <MovieLising />
           
-        </div>
+        {/* </div> */}
        
         <Footer/>
     </div>

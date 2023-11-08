@@ -1,15 +1,15 @@
 import React from 'react'
 import './movieCart.scss'
 
-const MovieCart = () => {
+const MovieCart = ({ data }) => {
   return (
   <div className='movie_'>
       <div className='movie'>
       <div className='img_muvie'>
-        <img src="https://s3.aminoapps.com/image/ll45maqwx72g3pr3yjdoizimyzji6rr7_hq.jpg" alt="" />
+        <img src={data?.Poster} alt="" />
       </div>
-      <h1> MARVEL X-MAN</h1>
-      <p>2014</p>
+      <h1>{data?.Title}</h1>
+      <p>{data?.Year}</p>
     </div>
   </div>
   )
